@@ -18,7 +18,12 @@ int pairSum(int *arr, int n, int target)
         {
             j--;
         }
+        if (arr[i] + arr[j] < target)
+        {
+            i++;
+        }
         i++;
+        j--;
     }
     return 0;
 }
