@@ -4,33 +4,30 @@ using namespace std;
 
 int Tripletsum(int *arr, int n, int target)
 {
-        
-        sort(arr, arr + n);
-    for (int i = 0; i < n; i++)
+    sort(arr, arr + n);
+    for (int i = 0; i < n-1; i++)
     {
-        int first = i;
-        // cout<<first<<" ";
-        int newTarget = target - first;
-        // cout<<newTarget<<" ";
-    i = 0;
-    int j = n - 1;
-    while (i < j)
-    {
-        if (arr[i] + arr[j] == newTarget){
-            cout << "Pair found (" <<arr[first]<<", "<< arr[i] << ", " << arr[j] << ")\n";
-            // cout<<endl;
-        }
-        if (arr[i] + arr[j] > newTarget)
+        int newTarget = target - arr[i];
+
+        int low = 0;
+        int high = n - 1;
+        while (low < high)
         {
-            j--;
+            if (arr[low] + arr[high] == newTarget)
+            {
+                cout << "Pair found (" << arr[i] << ", " << arr[low] << ", " << arr[high] << ")\n";
+            }
+            if (arr[low] + arr[high] > newTarget)
+            {
+                high--;
+            }
+            if (arr[low] + arr[high] < newTarget)
+            {
+                low++;
+            }
+            low++;
+            high--;
         }
-        if (arr[i] + arr[j] < newTarget)
-        {
-            i++;
-        }
-        i++;
-        j--;
-    }
     }
 }
 
