@@ -39,5 +39,6 @@ int Minimumswap(int *arr, int n, int k)
 int main()
 {
     int arr[] = {2, 1, 5, 6, 3};
-    cout << Minimumswap(arr, 5, 3) << endl;
+    int num = sizeof(arr)/sizeof(int);
+    cout << Minimumswap(arr, num, 3) << endl;
 }
