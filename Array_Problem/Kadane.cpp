@@ -4,19 +4,19 @@ using namespace std;
 
 int kadane(int *arr, int n)
 {
-    int max_so_for = 0;
+    int max_so_for = INT_MIN;
     int max_ending_here = 0;
     for (int i = 0; i < n; i++)
     {
         max_ending_here += arr[i];
     }
-    if (max_ending_here < 0)
-    {
-        max_ending_here = 0;
-    }
     if (max_so_for < max_ending_here)
     {
         max_so_for = max_ending_here;
+    }
+    if (max_ending_here < 0)
+    {
+        max_ending_here = 0;
     }
     return max_so_for;
 }
