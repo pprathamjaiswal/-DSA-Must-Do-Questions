@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool uniqueOccurrences(vector<int>& arr) {
+bool uniqueOccurrences(vector<int>& arr, int num) {
         unordered_map<int, int> freqCount;
         
         for(int i=0; i<arr.size(); i++){
@@ -20,9 +20,10 @@ bool uniqueOccurrences(vector<int>& arr) {
             return false;
         }
     }
+    
 int main()
 {
-    int arr = {1, 2, 2, 1, 1, 3};
+    int arr[] = {1, 2, 2, 1, 1, 3};
     int num = sizeof(arr) / sizeof(int);
     int ans = uniqueOccurrences(arr, num);
 
