@@ -8,7 +8,7 @@ int RepeatingElement(int *arr, int size)
     int min_index = -1;
     unordered_set<int, int> s;
 
-    for (int i=arr.size()-1; i >= 0; i--){
+    for (int i=size-1; i >= 0; i--){
         if(s.find(arr[i]) != s.end()){
             min_index = i;
         }
