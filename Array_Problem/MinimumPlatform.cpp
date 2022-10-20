@@ -26,6 +26,19 @@ int findPlatform(int *arr, int *dep, int n)
             result = platform_need;
     }
     return result;
+
+    // sort(arr, arr + n);
+    // sort(dep, dep + n);
+    // int j = 0;
+    // int count = 0;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     if (arr[i] <= dep[j])
+    //         count++;
+    //     else
+    //         j++;
+    // }
+    // return count;
 }
 
 int main()
