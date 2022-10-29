@@ -5,3 +5,6 @@
 
 
 # 2D Array Problem
+
+#BinarySearch
+
