@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int findComplement(int num)
+{
+    int mask = 0;
+    while (mask < num)
+    {
+        mask = (mask << 1) | 1;
+    }
+    int ans = (~num) & mask;
+    return ans;
+}
+
+int main()
+{
+    int num;
+    cin >> num;
+    int ans = findComplement(num);
+    cout<<ans<<endl;
+}
