@@ -3,9 +3,12 @@ using namespace std;
 
 void alternateSwap(int *arr, int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i = i + 2)
     {
-        swap(arr[i], arr[i + 1]);
+        if (i + 1 < n)
+        {
+            swap(arr[i], arr[i + 1]);
+        }
     }
 }
 
@@ -20,8 +23,9 @@ void printAlternateSwap(int *arr, int num)
 
 int main()
 {
+    // 9 3 6 12 4 32
     int arr[] = {9, 3, 6, 12, 4, 32};
     int n = sizeof(arr) / sizeof(int);
-    printAlternateSwap(arr, n);
     alternateSwap(arr, n);
+    printAlternateSwap(arr, n);
 }
