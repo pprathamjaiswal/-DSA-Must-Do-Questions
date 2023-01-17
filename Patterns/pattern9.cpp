@@ -7,13 +7,14 @@ int main()
     cin >> n;
 
     int row = 1;
-    int value = row;
+    int value = 1;
+    // int value =  row;
     while (row <= n)
     {
         int col = 1;
         while (col <= row)
         {
-            cout << value++<<" ";
+            cout << value++ << " ";
             col++;
         }
         cout << endl;
