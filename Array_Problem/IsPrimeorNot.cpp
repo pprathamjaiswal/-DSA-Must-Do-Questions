@@ -5,12 +5,12 @@ int main()
 {
     int n;
     cin >> n;
-    bool isPrime = false;
+    bool isPrime = true;
     for (int i = 2; i <= n; i++)
     {
         if (n % 2 == 0)
         {
-            isPrime = true;
+            isPrime = false;
             break;
         }
     }
